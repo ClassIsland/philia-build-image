@@ -69,6 +69,7 @@ ENV PATH="$PATH:/opt/loongarch64-toolchain/bin"
 
 COPY select-objcopy.ps1 /usr/local/bin/select-objcopy
 RUN chmod +x /usr/local/bin/select-objcopy
+RUN git config --global --add safe.directory '*'
 
 # 验证安装
 RUN ls /opt/loongarch64-toolchain/bin && \
